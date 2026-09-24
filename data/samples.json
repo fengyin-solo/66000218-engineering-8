@@ -1,0 +1,128 @@
+{
+  "description": "盲文翻译示例数据：输入文本必须由基线字符组成，期望点阵/期望 Unicode 必须与基线计算结果一致。",
+  "samples": [
+    {
+      "input": "A",
+      "expectedDots": [
+        [
+          1
+        ]
+      ],
+      "expectedUnicode": "⠁",
+      "note": "字母 A：仅 1 号点"
+    },
+    {
+      "input": "B",
+      "expectedDots": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expectedUnicode": "⠃",
+      "note": "字母 B：1、2 号点"
+    },
+    {
+      "input": "M",
+      "expectedDots": [
+        [
+          1,
+          3,
+          4
+        ]
+      ],
+      "expectedUnicode": "⠍",
+      "note": "字母 M：1、3、4 号点"
+    },
+    {
+      "input": "Z",
+      "expectedDots": [
+        [
+          1,
+          3,
+          5,
+          6
+        ]
+      ],
+      "expectedUnicode": "⠵",
+      "note": "字母 Z：1、3、5、6 号点"
+    },
+    {
+      "input": "6",
+      "expectedDots": [
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "expectedUnicode": "⠋",
+      "note": "数字 6：与 F 同形（1、2、4 号点）"
+    },
+    {
+      "input": "0",
+      "expectedDots": [
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "expectedUnicode": "⠚",
+      "note": "数字 0：与 J 同形（2、4、5 号点）"
+    },
+    {
+      "input": " ",
+      "expectedDots": [
+        []
+      ],
+      "expectedUnicode": "⠀",
+      "note": "空格：不凸起任何点，输出空白盲符 U+2800"
+    },
+    {
+      "input": "AB",
+      "expectedDots": [
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "expectedUnicode": "⠁⠃",
+      "note": "多字符短语：逐字符映射"
+    },
+    {
+      "input": "HELLO",
+      "expectedDots": [
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "expectedUnicode": "⠓⠑⠇⠇⠕",
+      "note": "单词示例 HELLO"
+    }
+  ]
+}

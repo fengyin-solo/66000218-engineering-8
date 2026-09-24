@@ -92,6 +92,11 @@
     <button @click="doExport" class="bg-green-700 px-4 py-2 rounded self-start hover:bg-green-600 text-sm">
       导出翻译文本
     </button>
+
+    <footer class="text-xs text-gray-500 pt-2 border-t border-gray-800">
+      盲文基线数据 v{{ DATA_VERSION }} · 指纹 {{ DATA_FINGERPRINT }}
+      （来自 data/braille-baseline.json，开发与构建共用）
+    </footer>
   </div>
 </template>
 
@@ -99,6 +104,7 @@
 import { ref } from 'vue'
 import { useBrailleStore } from './store/braille'
 import { BRAILLE_MAP } from './utils/braille'
+import { DATA_VERSION, DATA_FINGERPRINT } from './data-meta'
 import BrailleCell from './components/BrailleCell.vue'
 
 const store = useBrailleStore()

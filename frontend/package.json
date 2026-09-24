@@ -3,7 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": { "dev": "vite", "build": "vue-tsc && vite build", "preview": "vite preview" },
+  "scripts": {
+    "dev": "vite",
+    "dev:prepared": "node ../scripts/braille/pipeline.mjs check-deps sync-baseline verify-samples && vite",
+    "typecheck": "vue-tsc --noEmit",
+    "build:vite": "vite build",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
   "dependencies": { "vue": "^3.4.5", "pinia": "^2.1.7" },
-  "devDependencies": { "@vitejs/plugin-vue": "^4.5.2", "typescript": "^5.3.3", "vite": "^5.0.8", "vue-tsc": "^1.8.25", "tailwindcss": "^3.4.0", "postcss": "^8.4.32", "autoprefixer": "^10.4.16" }
+  "devDependencies": { "@vitejs/plugin-vue": "^4.5.2", "typescript": "^5.3.3", "vite": "^5.0.8", "vue-tsc": "^2.1.10", "tailwindcss": "^3.4.0", "postcss": "^8.4.32", "autoprefixer": "^10.4.16" }
 }

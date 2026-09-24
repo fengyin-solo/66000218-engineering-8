@@ -1,0 +1,17 @@
+{
+  "name": "braille-tutor-pipeline",
+  "private": true,
+  "version": "1.0.0",
+  "description": "盲文翻译与触觉学习器：本地开发与构建共用的依赖核对 / 构建 / 数据校验流水线",
+  "scripts": {
+    "setup": "npm install --prefix frontend",
+    "verify": "node scripts/braille/pipeline.mjs",
+    "pipeline": "node scripts/braille/pipeline.mjs",
+    "dev": "npm run dev:prepared --prefix frontend",
+    "dev:raw": "npm run dev --prefix frontend",
+    "build": "node scripts/braille/pipeline.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
