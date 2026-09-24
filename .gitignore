@@ -58,8 +58,8 @@ jspm_packages/
 
 # =========================
 # Lock files
+# （package-lock.json 需要入库：本地与构建机按同一锁文件安装，依赖才不会各装一套）
 # =========================
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
@@ -97,6 +97,9 @@ htmlcov/
 # =========================
 storybook-static/
 *.local
+
+# 由 data/baseline 经 scripts/pipeline.mjs 生成的运行时模块，不入库
+frontend/src/data/braille-data.ts
 
 # =========================
 # Python

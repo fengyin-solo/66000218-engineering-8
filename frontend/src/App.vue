@@ -92,13 +92,17 @@
     <button @click="doExport" class="bg-green-700 px-4 py-2 rounded self-start hover:bg-green-600 text-sm">
       导出翻译文本
     </button>
+
+    <footer class="text-xs text-gray-600 self-start">
+      盲文基线 v{{ BASELINE_VERSION }} · 指纹 sha256:{{ BASELINE_HASH.slice(0, 16) }}
+    </footer>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useBrailleStore } from './store/braille'
-import { BRAILLE_MAP } from './utils/braille'
+import { BRAILLE_MAP, BASELINE_VERSION, BASELINE_HASH } from './utils/braille'
 import BrailleCell from './components/BrailleCell.vue'
 
 const store = useBrailleStore()
